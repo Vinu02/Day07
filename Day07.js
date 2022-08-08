@@ -23,8 +23,15 @@ var res=result.reduce((acc,ele)=>acc+ele.population,0);
 console.log(res);
 
 //print the country which uses US Dollers as currency
-//var res=result.filter((ele)=>ele.USD==="currency");
-//console.log(res);
+var res  =  result.filter(country=>{
+  
+      for(let key in country.currencies){
+          
+          if(country.currencies[key].code=="USD"){
+            console.log(country.name)
+          }
+      }
+  })
  
 
 
